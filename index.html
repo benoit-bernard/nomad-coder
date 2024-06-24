@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #7 || Simple loading screen</title>
+
+    <!-- Reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            font-size: 16px;
+            font-family: 'Figtree', sans-serif;
+            line-height: 1.5;
+        }
+
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        #container {
+            background-color: #f0f0f0;
+            width: 80%;
+            max-width: 1200px;
+            margin: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            font-family: "Poppins, Helvetica, sans-serif";
+            border: 1px solid #aaa;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: transparent;
+        }
+
+        .name-and-logo {
+            display: flex;
+            align-items: center; /* Align items vertically centered */
+        }
+
+        .round-logo {
+            width: 50px;
+            height: 50px;
+            background-color: #4a90e2; /* Blue background for the logo */
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            margin-right: 1rem;
+            align-items: center; /* Align text vertically centered */
+            align-content: center;
+            text-align: center;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .name-in-header {
+            margin: 0;
+            font-size: 1.2rem;
+            font-family: "Poppins", Helvetica, sans-serif;
+            font-weight: 400;
+            float: left;
+            color: #222;
+            align-items: center; /* Align text vertically centered */
+            margin-right: 30px;
+        }
+        .name-quote{
+            margin: 90 0 0 0;
+            font-size: 0.8rem;
+            font-family: "Poppins", Helvetica, sans-serif;
+            color: #999;
+            align-items: center; /* Align text vertically centered */
+        }
+
+        .name-in-header b {
+            font-weight: 700;
+        }
+
+        .simple-top-menu {
+            display: flex;
+            align-items: center;
+        }
+        
+        .simple-top-menu a {
+            margin-left: 1rem;
+            color: #333333; /* Adjust color if needed */
+            text-decoration: none;
+            font-weight: 500;
+            align-items: center; /* Align text vertically centered */
+        }
+
+        .simple-top-menu a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+        }
+
+        .left, .right {
+            flex: 1;
+            min-width: 300px;
+            margin: 1rem;
+        }
+
+        .right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home-text {
+            text-align: left;
+        }
+
+        .home-text h1 {
+            font-size: 1.5rem;
+            margin: 0 0 1rem;
+            font-weight: 700;
+        }
+
+        .home-text p {
+            margin: 0;
+            color: #666;
+        }
+
+        .home-text h1{
+            font-size: 48px;
+            line-height: 56px;
+            margin: 0 0 1rem;
+            font-weight: 700;
+        }
+        .hspan {
+            color: #192b41;
+        }
+
+
+        .home-photo {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: relative;
+            border: 15px solid #ffffff;
+            perspective: 1000px; /* Adding perspective for the parallax effect */
+        }
+
+        .hp-inner {
+            width: 100%;
+            height: 100%;
+            background-image: url('nomadcoder.jpg');
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .hp-inner:hover {
+            transform: scale(1.1);
+        }
+
+        .quote-carousel {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem;
+            position: relative;
+            overflow: hidden;
+            height: 1.5rem;
+            font-weight: 300;
+        }
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            color: #aaa;
+        }
+        .carousel-active {
+            opacity: 1;
+        }
+
+        .button{
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            color: #4a90e2;
+            text-decoration: none;
+            border: 1px solid #4a90e2;
+            border-radius: 3rem;
+            margin-top: 1rem;
+        }
+
+        .button a{
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .button:hover, .button:hover a, .button a:hover
+        {
+            color: #fff;
+            background-color: #357bd8;
+            text-decoration: none;
+        }
+
+        
+         /* Optional: Adding animation on page load */
+        @keyframes scaleUp {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .hp-inner {
+            animation: scaleUp 0.5s ease-in-out forwards;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <div class="name-and-logo">
+                <div class="round-logo">BB</div>
+                <div class="name-in-header"><b>Nomad-coder</b>.com</div>   
+                <div class="name-quote">Craft it simple and beautiful</div> 
+            </div>
+            <div class="simple-top-menu"><a href="https://github.com/benoit-bernard" target="_blank">Git</a> <a href="https://www.linkedin.com/in/benoitjeromebernard/" target="_blank">linkedin</a></div>
+        </header>
+        <div class="content">
+            <div class="left">
+                <div class="home-text">
+                    <ul class="quote-carousel">
+                        <li class="carousel-item carousel-active">Dev fullstack | .NET | IT Security</li>
+                        <li class="carousel-item">Clean architecture from spagghety to onion</li>
+                        <li class="carousel-item">DevSecOps | SaaS</li>
+                        <li class="carousel-item">World leading tech and more</li>
+                        <li class="carousel-item">BackEnd - .Net Core | Sql Server | Mongo Db</li>
+                        <li class="carousel-item">FrontEnd - React | React Native | Typescript | .net MAUI (Xamarin) | WPF</li>
+                        <li class="carousel-item">Project management - Scrum Master</li>
+                    </ul>
+                    <h1><b>Benoit</b> <span class="hspan">BERNARD</span></h1>
+                    <p>Currently doing my best at the french leading and one of the world TOP 10 PSIM security software.</p>
+                    <p>Working on some side projects and available part time</p>
+                    <p>I'm enthusiastic about best practices (from spagghety to onion), craftmanship and security</p>
+
+                </div>
+                <div class="button"><a href="https://www.linkedin.com/in/benoitjeromebernard/" target="_blank">LinkedIn</a></div>
+                <div class="button"><a href="https://github.com/benoit-bernard" target="_blank">GitHub   </a></div>
+                <div class="button"><a href="https://about.me/benoit.b" target="_blank">AboutMe   </a></div>
+            </div>
+
+            <div class="right">
+                <div class="home-photo">
+                    <div class="hp-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const homePhoto = document.querySelector('.home-photo');
+        const hpInner = document.querySelector('.hp-inner');
+
+        homePhoto.addEventListener('mousemove', (e) => {
+            const rect = homePhoto.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const moveX = (x - centerX) / centerX;
+            const moveY = (y - centerY) / centerY;
+
+            hpInner.style.transform = `rotateX(${moveY * 10}deg) rotateY(${moveX * 10}deg)`;
+        });
+
+        homePhoto.addEventListener('mouseleave', () => {
+            hpInner.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        });
+
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let index = 0;
+        setInterval(() => {
+            carouselItems[index].classList.remove('carousel-active');
+            index = (index + 1) % carouselItems.length;
+            carouselItems[index].classList.add('carousel-active');
+        }, 5000);
+    </script>
+</body>
+</html>
