@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Legal Notice | Nomad Coder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&amp;family=Playfair+Display:ital,wght@1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#0a0f14",
+            "charcoal-neutral": "#1e293b",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"],
+            "serif": ["Playfair Display", "serif"],
+          },
+        },
+      },
+    }
+</script>
+<style type="text/tailwindcss">
+    @layer base {
+        body {
+            @apply bg-background-dark text-[#f6f7f8] font-display antialiased overflow-x-hidden;
+        }
+    }
+    .bg-grid-pattern {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+    .reveal-up {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: revealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes revealUp {
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .stagger-1 { animation-delay: 0.1s; }
+    .stagger-2 { animation-delay: 0.2s; }
+    .stagger-3 { animation-delay: 0.3s; }
+    .stagger-4 { animation-delay: 0.4s; }
+    
+    .content-section {
+        background: linear-gradient(135deg, rgba(30,41,59,0.2) 0%, rgba(10,15,20,0.3) 100%);
+        backdrop-filter: blur(10px);
+    }
+    
+    .info-card {
+        background: rgba(19,127,236,0.05);
+        border: 1px solid rgba(19,127,236,0.1);
+        transition: all 0.3s ease;
+    }
+    .info-card:hover {
+        border-color: rgba(19,127,236,0.3);
+    }
+</style>
+</head>
+<body class="relative min-h-screen selection:bg-primary/30">
+<div class="fixed inset-0 bg-grid-pattern pointer-events-none"></div>
+<div class="fixed inset-0 bg-[radial-gradient(circle_at_70%_80%,_rgba(19,127,236,0.05)_0%,_transparent_50%)] pointer-events-none"></div>
+
+<header class="fixed top-0 w-full z-50 px-8 py-8 md:px-16 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<a href="code.html" class="flex items-center space-x-3 group cursor-pointer">
+<div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center transition-all duration-500 group-hover:border-primary/50 group-hover:shadow-[0_0_15px_rgba(19,127,236,0.2)]">
+<span class="text-white font-light text-[10px] tracking-tighter">NC</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] font-bold tracking-[0.4em] uppercase opacity-40">Artisan Engineer</span>
+<span class="text-sm font-medium tracking-wide">Nomad Coder</span>
+</div>
+</a>
+<div class="flex items-center space-x-8">
+<a class="opacity-30 hover:opacity-100 hover:text-primary transition-all duration-500 hover:scale-110" href="https://www.linkedin.com/in/benoitjeromebernard/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="opacity-30 hover:opacity-100 hover:text-primary transition-all duration-500 hover:scale-110" href="https://github.com/benoit-bernard" target="_blank" rel="noopener noreferrer" title="GitHub">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.381 1.235-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+<a class="opacity-30 hover:opacity-100 hover:text-primary transition-all duration-500 hover:scale-110" href="https://www.instagram.com/benoit_bernard/" target="_blank" rel="noopener noreferrer" title="Instagram">
+<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+</header>
+
+<main class="relative px-8 md:px-16 pt-40 pb-32">
+<div class="max-w-4xl mx-auto">
+
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="flex items-center space-x-3 reveal-up stagger-1">
+<span class="w-10 h-[1px] bg-primary/40"></span>
+<span class="text-[10px] font-bold tracking-[0.5em] uppercase text-primary/60">Compliance</span>
+</div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] text-white/90 mt-6 reveal-up stagger-2">
+    Legal <span class="font-serif italic text-white">notice</span>
+</h1>
+<p class="text-lg text-white/40 max-w-2xl font-light leading-relaxed mt-6 reveal-up stagger-3">
+    In accordance with French law n°2004-575 of June 21, 2004 on trust in the digital economy (LCEN).
+</p>
+</section>
+
+<!-- Editor Info Card -->
+<div class="info-card rounded-2xl p-6 mb-12 reveal-up stagger-3">
+<div class="flex items-center space-x-3 mb-4">
+<span class="material-symbols-outlined text-primary">info</span>
+<span class="text-sm text-white/60">Personal non-commercial website</span>
+</div>
+<p class="text-white/40 text-sm">This site is a personal portfolio presenting my professional journey and skills. It is not commercial and does not sell products or services directly.</p>
+</div>
+
+<!-- Content -->
+<div class="content-section rounded-3xl border border-white/5 p-8 md:p-12 space-y-12 reveal-up stagger-4">
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">person</span>
+<h2 class="text-xl font-medium text-white">Site publisher</h2>
+</div>
+<div class="space-y-3 text-white/50">
+<p><span class="text-white/70 font-medium">Name:</span> Benoît Bernard</p>
+<p><span class="text-white/70 font-medium">Website:</span> nomad-coder.com</p>
+<p><span class="text-white/70 font-medium">Status:</span> Individual - Personal site</p>
+<p><span class="text-white/70 font-medium">Contact:</span> Via the <a href="contact.html" class="text-primary hover:underline">contact form</a></p>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">dns</span>
+<h2 class="text-xl font-medium text-white">Hosting</h2>
+</div>
+<div class="space-y-3 text-white/50">
+<p>This site is hosted by a professional web hosting service that complies with applicable regulations.</p>
+<p class="text-sm text-white/30 mt-4">The exact contact details of the hosting provider can be provided upon request via the contact form.</p>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">copyright</span>
+<h2 class="text-xl font-medium text-white">Intellectual property</h2>
+</div>
+<div class="space-y-4 text-white/50 leading-relaxed">
+<p>All content on this site (text, images, graphics, logo, icons, etc.) is the exclusive property of Benoît Bernard, unless stated otherwise.</p>
+<p>Any reproduction, distribution, modification, adaptation, retransmission, or publication of these elements is strictly prohibited without prior written consent from the author.</p>
+<p><span class="text-white/70 font-medium">Technologies used:</span> This site uses Tailwind CSS, Google Fonts (Inter, Playfair Display), and Google Material Symbols under their respective licenses.</p>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">camera_alt</span>
+<h2 class="text-xl font-medium text-white">Photo credits</h2>
+</div>
+<div class="space-y-3 text-white/50 leading-relaxed">
+<p>The photographs on this site are either:</p>
+<ul class="list-disc list-inside space-y-2 ml-4">
+<li>Personal creations of the author</li>
+<li>Royalty-free images</li>
+<li>Images used with permission from their respective authors</li>
+</ul>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">warning</span>
+<h2 class="text-xl font-medium text-white">Limitation of liability</h2>
+</div>
+<div class="space-y-4 text-white/50 leading-relaxed">
+<p>The information on this site is provided for informational purposes and may change. The publisher does not guarantee the accuracy, completeness, or timeliness of the information.</p>
+<p>The publisher cannot be held liable for direct or indirect damages resulting from access or use of this site, including inaccessibility, data loss, deterioration, destruction, or viruses.</p>
+<p>This site may contain links to other websites. The publisher has no control over those sites and disclaims responsibility for their content.</p>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">link</span>
+<h2 class="text-xl font-medium text-white">Hyperlinks</h2>
+</div>
+<div class="space-y-4 text-white/50 leading-relaxed">
+<p><span class="text-white/70 font-medium">Outgoing links:</span> This site contains links to third-party platforms (LinkedIn, GitHub, Instagram). Clicking these links will leave nomad-coder.com. The publisher is not responsible for the content of these external sites.</p>
+<p><span class="text-white/70 font-medium">Incoming links:</span> Creating hyperlinks to this site is permitted without prior request, provided those links do not harm the publisher's image.</p>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">privacy_tip</span>
+<h2 class="text-xl font-medium text-white">Personal data protection</h2>
+</div>
+<div class="space-y-3 text-white/50 leading-relaxed">
+<p>In accordance with the General Data Protection Regulation (GDPR) and the French Data Protection Act, you have rights regarding your personal data.</p>
+<p>For more information, see our <a href="privacy.html" class="text-primary hover:underline">Privacy Policy</a>.</p>
+</div>
+</section>
+
+<section>
+<div class="flex items-center space-x-3 mb-6">
+<span class="material-symbols-outlined text-primary">gavel</span>
+<h2 class="text-xl font-medium text-white">Applicable law</h2>
+</div>
+<p class="text-white/50 leading-relaxed">
+    This site and its legal notice are governed by French law. In the event of a dispute and after attempting an amicable solution, French courts will have exclusive jurisdiction.
+</p>
+</section>
+
+<section class="pt-8 border-t border-white/10">
+<div class="flex items-center justify-between flex-wrap gap-4">
+<p class="text-white/30 text-sm">
+    Last updated: January 2024
+</p>
+<a href="contact.html" class="inline-flex items-center space-x-2 text-primary hover:text-white transition-colors text-sm">
+<span>Any questions?</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</section>
+
+</div>
+
+</div>
+</main>
+
+<footer class="w-full px-8 py-10 md:px-16 border-t border-white/5 bg-background-dark/50 backdrop-blur-sm">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-[9px] uppercase tracking-[0.4em] text-white/20">
+<p>© 2024 Nomad-Coder.com / All Rights Reserved.</p>
+<div class="flex space-x-12 mt-6 md:mt-0">
+<a class="hover:text-primary transition-colors duration-500" href="privacy.html">Privacy</a>
+<a class="hover:text-primary transition-colors duration-500" href="legal.html">Legal</a>
+<a class="hover:text-primary transition-colors duration-500" href="contact.html">Contact</a>
+</div>
+</div>
+</footer>
+
+</body></html>
