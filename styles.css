@@ -1,0 +1,246 @@
+/* Consolidated inline styles moved from HTML files (no Tailwind runtime needed). */
+
+body {
+    background-color: #0a0f14;
+    color: #f6f7f8;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.bg-grid-pattern {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+.stagger-7 { animation-delay: 0.7s; }
+
+/* Index page */
+.page-index .reveal-up {
+    animation: indexRevealUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes indexRevealUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-index .profile-float {
+    animation: indexFloat 6s ease-in-out infinite;
+}
+
+@keyframes indexFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Contact page */
+.page-contact .reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: contactRevealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes contactRevealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-contact .contact-card {
+    background: linear-gradient(135deg, rgba(30,41,59,0.3) 0%, rgba(10,15,20,0.5) 100%);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-contact .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(19,127,236,0.1);
+    border-color: rgba(19,127,236,0.3);
+}
+
+.page-contact .input-field {
+    background: rgba(30,41,59,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+.page-contact .input-field:focus {
+    outline: none;
+    border-color: rgba(19,127,236,0.5);
+    box-shadow: 0 0 20px rgba(19,127,236,0.1);
+}
+
+.page-contact .input-field::placeholder {
+    color: rgba(255,255,255,0.2);
+}
+
+.page-contact .input-field option {
+    background-color: #0a0f14;
+    color: #f6f7f8;
+}
+
+.page-contact .send-btn {
+    background: linear-gradient(135deg, #137fec 0%, #0a5bb8 100%);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-contact .send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(19,127,236,0.3);
+}
+
+.page-contact .social-link {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-contact .social-link:hover {
+    transform: translateX(10px);
+    color: #137fec;
+}
+
+.page-contact .floating-icon {
+    animation: contactFloat 4s ease-in-out infinite;
+}
+
+@keyframes contactFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+/* Philosophy page */
+.page-philosophy .reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: philosophyRevealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes philosophyRevealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-philosophy .reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: philosophyRevealLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes philosophyRevealLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.page-philosophy .hover-line::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #137fec, transparent);
+    transition: width 0.5s ease;
+}
+
+.page-philosophy .hover-line:hover::after {
+    width: 100%;
+}
+
+.page-philosophy .philosophy-card {
+    background: linear-gradient(135deg, rgba(30,41,59,0.3) 0%, rgba(10,15,20,0.5) 100%);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-philosophy .philosophy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(19,127,236,0.1);
+    border-color: rgba(19,127,236,0.3);
+}
+
+.page-philosophy .pulse-glow {
+    animation: philosophyPulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes philosophyPulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(19,127,236,0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(19,127,236,0.4);
+    }
+}
+
+/* Privacy page */
+.page-privacy .reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: privacyRevealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes privacyRevealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-privacy .content-section {
+    background: linear-gradient(135deg, rgba(30,41,59,0.2) 0%, rgba(10,15,20,0.3) 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* Legal page */
+.page-legal .reveal-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: legalRevealUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes legalRevealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-legal .content-section {
+    background: linear-gradient(135deg, rgba(30,41,59,0.2) 0%, rgba(10,15,20,0.3) 100%);
+    backdrop-filter: blur(10px);
+}
+
+.page-legal .info-card {
+    background: rgba(19,127,236,0.05);
+    border: 1px solid rgba(19,127,236,0.1);
+    transition: all 0.3s ease;
+}
+
+.page-legal .info-card:hover {
+    border-color: rgba(19,127,236,0.3);
+}
